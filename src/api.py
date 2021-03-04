@@ -41,8 +41,7 @@ def capture():
 
 @app.route('/video/stream')
 def stream_video():
-    return Response(capture(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(capture(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 @app.route('/video/activate')
