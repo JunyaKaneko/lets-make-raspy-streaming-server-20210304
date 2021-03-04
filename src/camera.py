@@ -14,9 +14,6 @@ class CameraState(Enum):
 
 
 class Camera:
-    """カメラから画像取得を行い, 取得した画像を所定の場所に保存するクラス.
-
-    """
     def __init__(self, work_dir='/tmp', resolution=(320, 240)):
         self._camera = PiCamera()
         self._camera.resolution = resolution
@@ -74,7 +71,7 @@ class Camera:
 
 
 if __name__ == '__main__':
-    camera = Camera()  # カメラオブジェクトを作成
-    camera.start()     # カメラの起動
-    camera.stream(20)  # FPS 約 20 を目標に画像を取得し続ける
+    camera = Camera()
+    camera.start()
+    camera.stream(20)
 
